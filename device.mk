@@ -94,8 +94,8 @@ PRODUCT_PACKAGES += \
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hardware.keymaster@4.1
 
-TARGET_INIT_VENDOR_LIB := libinit_ossi
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ossi
+#TARGET_INIT_VENDOR_LIB := libinit_ossi
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_ossi
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so
