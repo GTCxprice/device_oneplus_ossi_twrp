@@ -7,6 +7,9 @@
 
 LOCAL_PATH := device/oneplus/ossi
 
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
+
 # Dynamic
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -48,17 +51,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/mtk_plpath_utils \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-# Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
-
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl
 
@@ -71,10 +63,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
     mtk_plpath_utils.recovery
-
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2
 
 # Keymint
 PRODUCT_PACKAGES += \
@@ -93,9 +81,6 @@ PRODUCT_PACKAGES += \
 # Additional target Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hardware.keymaster@4.1
-
-#TARGET_INIT_VENDOR_LIB := libinit_ossi
-#TARGET_RECOVERY_DEVICE_MODULES := libinit_ossi
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1.so

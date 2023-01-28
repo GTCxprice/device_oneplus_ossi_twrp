@@ -6,11 +6,12 @@
         manifest_radioconfig.xml
         manifest_em.xml
         manifest_videotelephony.xml
-        manifest_ir.xml
         manifest_tee.xml
+        manifest_trustonic.xml
         manifest_log.xml
         manifest_mdmonitor.xml
         manifest_aee.xml
+        manifest_boot.xml
         manifest_netdagent.xml
         manifest_tetheroffloadservice.xml
         manifest_pq.xml
@@ -20,17 +21,7 @@
         manifest_apmonitor.xml
         manifest_nwk_opt.xml
         manifest_composer.xml
-        manifest_cameraprovider.xml
         manifest_target_level_s.xml
-        manifest.xml
-        manifest_nfc.xml
-        manifest_eSE.xml
-        manifest_vendor.xiaomi.hardware.mlipay.xml
-        manifest_vendor.xiaomi.hardware.mtdservice.xml
-        manifest_vendor.xiaomi.hardware.tidaservice.xml
-        manifest_vendor.xiaomi.hardware.vsimapp.xml
-        manifest_vendor.xiaomi.hardware.mfidoca.xml
-        manifest_displayfeature.xml
         manifest.xml
 -->
 <manifest version="4.0" type="device" target-level="6">
@@ -75,14 +66,14 @@
         <fqname>@2.1::IBluetoothAudioProvidersFactory/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.camera.provider</name>
+        <name>android.hardware.boot</name>
         <transport>hwbinder</transport>
-        <version>2.6</version>
+        <version>1.0</version>
         <interface>
-            <name>ICameraProvider</name>
-            <instance>internal/0</instance>
+            <name>IBootControl</name>
+            <instance>default</instance>
         </interface>
-        <fqname>@2.6::ICameraProvider/internal/0</fqname>
+        <fqname>@1.0::IBootControl/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -125,16 +116,6 @@
         <fqname>@4.0::IMapper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.ir</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IConsumerIr</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IConsumerIr/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -148,16 +129,6 @@
         </interface>
         <fqname>@1.0::IOmx/default</fqname>
         <fqname>@1.0::IOmxStore/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>INfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::INfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
@@ -217,22 +188,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IDevice/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.secure_element</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISecureElement</name>
-            <instance>SIM1</instance>
-            <instance>SIM2</instance>
-            <instance>eSE1</instance>
-        </interface>
-        <fqname>@1.0::ISecureElement/SIM1</fqname>
-        <fqname>@1.0::ISecureElement/SIM2</fqname>
-        <fqname>@1.0::ISecureElement/eSE1</fqname>
-        <fqname>@1.2::ISecureElement/SIM1</fqname>
-        <fqname>@1.2::ISecureElement/SIM2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
@@ -556,84 +511,24 @@
         <fqname>@1.0::IVideoTelephony/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.nxp.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>INqNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::INqNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.sla.service</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISlaService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISlaService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.displayfeature</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDisplayFeature</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IDisplayFeature/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.mfidoca</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IFidoService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IFidoService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.mlipay</name>
+        <name>vendor.trustonic.tee</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
         <interface>
-            <name>IMlipayService</name>
+            <name>ITee</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IMlipayService/default</fqname>
+        <fqname>@1.1::ITee/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oneplus.hardware.mtdservice</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IMTService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.2::IMTService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.tidaservice</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>ITidaService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::ITidaService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.oneplus.hardware.vsimapp</name>
+        <name>vendor.trustonic.tee.tui</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IVSIMService</name>
+            <name>ITui</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IVSIMService/default</fqname>
+        <fqname>@1.0::ITui/default</fqname>
     </hal>
     <sepolicy>
         <version>31.0</version>
