@@ -21,7 +21,7 @@ Display | 1080 x 2412 pixels, 6.7 inches (~394 ppi density)
 Rearcamera 1 | 50 MP, f/1.8, 24mm (wide), 1/1.56", 1.0µm, PDAF, OIS
 Rearcamera 2 | 8 MP, f/2.2, 15mm, 120˚ (ultrawide), 1/4.0", 1.12µm
 Rearcamera 3 | 2 MP, f/2.4, (macro)
-Frontcamer | 16 MP, f/2.4, 26mm (wide), 1/3.09", 1.0µm
+Frontcamera | 16 MP, f/2.4, 26mm (wide), 1/3.09", 1.0µm
 
 ## Device picture
 
